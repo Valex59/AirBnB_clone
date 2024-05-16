@@ -1,12 +1,24 @@
-# Welcome to the Magical Math Kingdom!
+#!/usr/bin/python3
+"""
+This module provides basic mathematical operations.
+"""
+
 
 def add_numbers(number1: int, number2: int) -> int:
-    """Add two numbers and return the result."""
+    """
+    Adds two integers and returns the result.
+
+    Args:
+    number1 (int): The first number.
+    number2 (int): The second number.
+
+    Returns:
+        int: The sum of number1 and number2.
+    """
     return number1 + number2
 
 
 if __name__ == "__main__":
-    # Let's perform some magical addition!
     num1 = 10
     num2 = 20
     result = add_numbers(num1, num2)
