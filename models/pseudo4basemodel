@@ -1,0 +1,42 @@
+#!/usr/bin/python3
+# This defines the BaseModel class
+
+class BaseModel(self):
+    1. define public instance attribute 'id'
+    2. when instance is created, assign 'id' with the uuid module
+        * when generating unique 'id', use uuid.uudi4()
+        * convert generate id to a string
+    3. each instance of BaseModel create should have a unique 'id'
+    4. define public instance 'created_at'
+    5. assign datetime value to 'created_at' when instance is created
+    6. define public 'updated_at'
+    7. assign 'updated_at' with latest datetime when instance is updated
+    8. __str__ should print: [<class name>] (<self.id>) <self.__dict__>
+    9.
+    10. define 'save(self)' method that updates the 'updated_at' attribute
+    11. define public instance method 'to_dict' which returns a dictionary
+        containing all keys/values of '__dict__'.
+        * to_dict returns it's dictionary by using 'self.__dict__
+        * only set instance attribute will be returned
+        * the dictionary would contain key __class__ that holds classname
+            of the object.
+        * use statement 'varible = datetime.isoformat()' to convert 
+            'created_at' and 'updated_at' to string object.
+    12. Create a dictionary representation of BaseModel with "simple object type"
+
+
+>>> $ cat test_base_model.py
+#!/usr/bin/python3
+from models.base_model import BaseModel
+
+my_model = BaseModel()
+my_model.name = "My First Model"
+my_model.my_number = 89
+print(my_model)
+my_model.save()
+print(my_model)
+my_model_json = my_model.to_dict()
+print(my_model_json)
+print("JSON of my_model:")
+for key in my_model_json.keys():
+    print("\t{}: ({}) - {}".format(key, type(my_model_json[key]), my_model_json[key]))
