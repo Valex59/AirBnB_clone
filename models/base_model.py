@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-BaseMoedel
+BaseModel
 This module defines the BaseModel class, which acts as the foundational class
 for all other classes in the AirBnB clone project.
 """
@@ -17,24 +17,31 @@ class BaseModel:
         id (str): Each BaseModel instance is assigned a unique id created with
         uuid4 of the uuid builtin module.
         created_at (datetime): assigns the datetime through datetime builtin
-        at it's creation.
-        updated_at (datetime): assigns athe datetime which updates at the
+        at its creation.
+        updated_at (datetime): assigns the datetime which updates at the
         creation of any object.
     """
 
-    def __init__(self):
+    def __init__(self, *args, **kwargs):
         """A new instance of BaseModel is initialized."""
-        self.id = str(uuid.uuid4())
-        self.created_at = datetime.now()
-        self.updated_at = datetime.now()
+        if kwargs:
+            for key, value in kwargs.items():
+                if key == 'created_at' or key == 'updated_at':
+                    value = datetime.fromisoformat(value)
+                if key != '__class__':
+                    setattr(self, key, value)
+        else:
+            self.id = str(uuid.uuid4())
+            self.created_at = datetime.now()
+            self.updated_at = datetime.now()
 
     def __str__(self):
         """A string representation of the BaseModel is returned."""
-        return "[{}] ({}) {}".format(self.__class__.__name__, 
-                self.id, self.__dict__)
+        return "[{}] ({}) {}".format(
+                self.__class__.__name__, self.id, self.__dict__)
 
     def save(self):
-        """Update the 'updated_at' wth thw current datetime."""
+        """Update the 'updated_at' with the current datetime."""
         self.updated_at = datetime.now()
 
     def to_dict(self):
