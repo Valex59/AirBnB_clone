@@ -1,0 +1,22 @@
+parent class
+
+Personal details form
+
+Firstname:
+Lastname:
+Id_number:
+dob:
+
+instance1 of the parent clss
+
+Firstname: Jo
+Lasname: Omo
+Id_number: 123ui2
+dob: 12/2/33
+
+instance2 of the parent clss
+
+Firstname: Dan
+Lasname: Jamjjil 
+Id_number: 3uib2
+dob: 12/22/3
