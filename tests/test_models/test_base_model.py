@@ -12,6 +12,9 @@ class TestBaseModel(unittest.TestCase):
     """
     Test suite for the BaseModel class.
     """
+    def test_for_kwargs_as_attribute(self):
+        items = BaseModel()
+        cont_dict = {key
 
     def test_BaseModel_attributes(self):
         self.assertIsInstance(BaseModel().id, str)
