@@ -5,8 +5,8 @@ This module defines the BaseModel class, which acts as the foundational class
 for all other classes in the AirBnB clone project.
 """
 # This module defines a BaseModel class used as parent for other classes
-import datetime
-import uuid4
+from datetime import datetime
+import uuid
 
 class BaseModel:
     """Defines BaseModel class with public attributes:
@@ -52,11 +52,11 @@ class BaseModel:
                 else:
                     continue
         else:
-            self.id = str(uuid4.uuid4())
-            self.created_at = datetime.datetime.now()
+            self.id = str(uuid.uuid4())
+            self.created_at = datetime.now()
             self.updated_at = self.created_at
 
-   def __str__(self):
+    def __str__(self):
         """A string representation of the BaseModel is returned."""
         return "[{}] ({}) {}".format(
                 self.__class__.__name__, self.id, self.__dict__)
