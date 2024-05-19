@@ -47,7 +47,7 @@ class BaseModel:
             for key, value in kwargs.items():
                 if key != "__class__":
                     if key == "created_at" or key == "updated_at":
-                        value = datetime.datetime.fromisoformat(value)
+                        value = datetime.fromisoformat(value)
                     setattr(self, key, value)
                 else:
                     continue

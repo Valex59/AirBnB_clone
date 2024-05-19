@@ -4,7 +4,7 @@ Unittests for the BaseModel class.
 """
 
 import unittest
-from datetime import datetime
+import datetime
 from models.base_model import BaseModel
 
 
@@ -13,13 +13,19 @@ class TestBaseModel(unittest.TestCase):
     Test suite for the BaseModel class.
     """
     def test_for_kwargs_as_attribute(self):
-        items = BaseModel()
-        cont_dict = {key
+        """
+        Tests for kwargs as attributes.
+        """
+        model = BaseModel()
+        model.name = "Holberton"
+        model.my_number = 89
+        self.assertEqual(model.name, "Holberton")
+        self.assertEqual(model.my_number, 89)
 
     def test_BaseModel_attributes(self):
         self.assertIsInstance(BaseModel().id, str)
-        self.assertIsInstance(BaseModel().updated_at, datetime)
-        self.assertIsInstance(BaseModel().created_at, datetime)
+        self.assertIsInstance(BaseModel().updated_at, datetime.datetime)
+        self.assertIsInstance(BaseModel().created_at, datetime.datetime)
 
     def test_save_method_of_BaseModel_attr(self):
         # Before save method is called.
