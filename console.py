@@ -12,12 +12,9 @@ class HBNBCommand(cmd.Cmd):
 
     prompt = "(hbnb) "
 
-    def __init__(self):
-        super().__init__()
-
     def do_EOF(self, args):
         """Exit the command interpreter."""
-        print()
+        return True
 
     def do_quit(self, args):
         """Quit command to exit the program"""
