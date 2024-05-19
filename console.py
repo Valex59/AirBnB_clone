@@ -8,7 +8,7 @@ import cmd
 
 
 class HBNBCommand(cmd.Cmd):
-    """HBnB project's command interpreter"""
+    """HBnB project's command interpreer"""
 
     prompt = "(hbnb) "
 
