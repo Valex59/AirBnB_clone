@@ -20,7 +20,7 @@ class TestBaseModel(unittest.TestCase):
         self.assertIsInstance(BaseModel().id, str)
         self.assertIsInstance(BaseModel().updated_at, datetime)
         self.assertIsInstance(BaseModel().created_at, datetime)
-    
+
     def test_save_method_of_BaseModel_attr(self):
         # Before save method is called.
         model = BaseModel()
@@ -35,6 +35,7 @@ class TestBaseModel(unittest.TestCase):
         self.assertIn('__class__', dict_cont)
         self.assertIsInstance(dict_cont['created_at'], str)
         self.assertIsInstance(dict_cont['updated_at'], str)
+
 
 if "_name_" == "_main_":
     unittest.main()
