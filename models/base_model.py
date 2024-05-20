@@ -12,19 +12,22 @@ import uuid
 class BaseModel:
     """Defines BaseModel class with public attributes:
 
-    id: a string representing the unique id of the instance of the BaseModel
-    created_at: a datetime object representing the creation date of the
+        id: a string representing the unique id of the
+        instance of the BaseModel
+        created_at: a datetime object representing the creation date of the
                 instance of the BaseModel
-    updated_at: a datetime object representing the last update date of
+        updated_at: a datetime object representing the last update date of
                 the instance of the BaseModel
-    """
+        """
 
-    def __init__(self, *args, **kwargs):
+    """def __init__(self, *args, **kwargs):"""
+
+    def __init__(self):
         """Initializes a new BaseModel instance
 
         Args:
-            *args: list of arguments
-            **kwargs: dictionary of arguments
+        *args: list of arguments
+        **kwargs: dictionary of arguments
         Note: each instance of BaseModel create should have a unique 'id'.
         define public instance 'created_at'.
         assign datetime value to 'created_at' when instance is created.
@@ -45,6 +48,11 @@ class BaseModel:
 
         """
 
+        self.id = str(uuid.uuid4())
+        self.created_at = datetime.now()
+        self.updated_at = datetime.now()
+        """
+
         if kwargs:
             for key, value in kwargs.items():
                 if key != "__class__":
@@ -57,6 +65,7 @@ class BaseModel:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
             self.updated_at = self.created_at
+            """
 
     def __str__(self):
         """A string representation of the BaseModel is returned."""
