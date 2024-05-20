@@ -23,20 +23,22 @@ class TestBaseModel(unittest.TestCase):
         self.assertEqual(model.my_number, 89)
 
     def test_BaseModel_attributes(self):
+        """Tests for Base_model attributes"""
         self.assertIsInstance(BaseModel().id, str)
         self.assertIsInstance(BaseModel().updated_at, datetime.datetime)
         self.assertIsInstance(BaseModel().created_at, datetime.datetime)
 
     def test_save_method_of_BaseModel_attr(self):
-        # Before save method is called.
+        """Before save method is called."""
         model = BaseModel()
         previous = model.updated_at
         model.save()
-        # After save method is called
+        """After save method is called."""
         current = model.updated_at
         self.assertNotEqual(previous, current)
 
     def test_if_to_dict_contains_all_key(self):
+        """Tests if dictionary contains all keys."""
         dict_cont = BaseModel().to_dict()
         self.assertIn('__class__', dict_cont)
         self.assertIsInstance(dict_cont['created_at'], str)
