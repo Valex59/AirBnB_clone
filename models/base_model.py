@@ -8,6 +8,7 @@ for all other classes in the AirBnB clone project.
 from datetime import datetime
 import uuid
 
+
 class BaseModel:
     """Defines BaseModel class with public attributes:
 
@@ -39,7 +40,8 @@ class BaseModel:
         of the object.
         use statement 'varible = datetime.isoformat()' to convert
         'created_at' and 'updated_at' to string object.
-        Create a dictionary representation of BaseModel with "simple object type"
+        Create a dictionary representation of BaseModel with "simple object
+        type"
 
         """
 
@@ -59,7 +61,7 @@ class BaseModel:
     def __str__(self):
         """A string representation of the BaseModel is returned."""
         return "[{}] ({}) {}".format(
-                self.__class__.__name__, self.id, self.__dict__)
+                self.__class__.__name__, self.id, str(self.__dict__))
 
     def save(self):
         """Update the 'updated_at' wth thw current datetime."""
