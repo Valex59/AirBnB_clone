@@ -3,8 +3,7 @@ body {
     margin: 0;
     color: #484848;
     font-size: 14px;
-
-    display: flex;
-    flex-direction: column;
+    /*display: flex;
+    flex-direction: column;*/
     min-height: 100vh;
 }
