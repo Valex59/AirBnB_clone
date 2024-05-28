@@ -6,8 +6,7 @@
     border-radius: 4px;
     display: flex;
     align-items: center;
-    position: relative; /* To position the button inside */
-    padding-left: 20px; /* Optional: add some padding */
+    position: relative; /* To position the button inside */ 
 }
 
 .locations, .amenities {
@@ -16,7 +15,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 20px;
+    padding-left: 20px;
 }
 
 .locations {
