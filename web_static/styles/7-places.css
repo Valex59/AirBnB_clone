@@ -15,6 +15,7 @@
     border-radius: 4px;
     display: inline-block;
     vertical-align: top; /* Align articles top if displaying inline */
+    align-items: center;
 }
 
 .places h2 {
