@@ -23,7 +23,7 @@
     flex-direction:column;
     /*vertical-align: top;*/ /* Align articles top if displaying inline */
     align-items: center;
-    margin: 0 auto;
+    margin: 0 10px 20px 10px;
 }
 
 .places h2 {
