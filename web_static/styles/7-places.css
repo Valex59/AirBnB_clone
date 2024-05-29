@@ -1,10 +1,16 @@
 .places {
     margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
 }
 
 .places h1 {
     font-size: 30px;
     text-align: left;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .places article {
@@ -13,9 +19,11 @@
     padding: 20px;
     border: 1px solid #FF5A5F;
     border-radius: 4px;
-    display: inline-block;
-    vertical-align: top; /* Align articles top if displaying inline */
+    display: flex;
+    flex-direction:column;
+    /*vertical-align: top;*/ /* Align articles top if displaying inline */
     align-items: center;
+    margin: 0 auto;
 }
 
 .places h2 {
