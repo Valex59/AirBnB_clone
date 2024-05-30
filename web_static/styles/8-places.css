@@ -71,19 +71,16 @@
 	background-image: url("../images/icon_group.png");
 	background-repeat: no-repeat;
 	width: 100px;
-	background-size: contain;
 }
 
 .number_rooms {
 	background-image: url("../images/icon_bed.png");
 	background-repeat: no-repeat;
 	width: 100px;
-	background-size: contain;
 }
 
 .number_bathrooms {
 	background-image: url("../images.icon_bath.png");
 	background-repeat: no-repeat;
 	width: 100px;
-	background-size: contain;
 }
