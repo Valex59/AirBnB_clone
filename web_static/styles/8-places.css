@@ -54,12 +54,13 @@
 
 .information div {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     width: 100px;
     background-repeat: no-repeat;
-    background-position: left center;
-    padding-left: 35px;
+    background-position: center-top;
+    margin-top: 2px;
+    padding-top: 30px;
 }
 
 .user {
