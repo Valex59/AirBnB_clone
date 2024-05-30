@@ -54,7 +54,7 @@
 
 .information div {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     width: 100px;
     background-repeat: no-repeat;
