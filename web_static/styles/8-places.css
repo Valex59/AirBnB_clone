@@ -3,7 +3,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
 }
 
 .places h1 {
@@ -68,3 +67,20 @@
     margin-top: 10px;
 }
 
+.max_guests {
+	background-image: url("../images/icon_group.png");
+	background-repeat: no-repeat;
+	width: 100px;
+}
+
+.number_rooms {
+	background-image: url("../images/icon_bed.png");
+	background-repeat: no-repeat;
+	width: 100px;
+}
+
+.number_bathrooms {
+	background-image: url("../images.icon_bath.png");
+	background-repeat: no-repeat;
+	width: 100px;
+}
