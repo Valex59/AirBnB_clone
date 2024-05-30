@@ -48,8 +48,8 @@
     border-top: 1px solid #DDDDDD;
     border-bottom: 1px solid #DDDDDD;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;
+    /*align-items: center;*/
     padding: 10px 0;
 }
 
