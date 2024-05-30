@@ -72,18 +72,16 @@
     margin-top: 10px;
 }
 
-.max_guests {
+.max_guest {
 	background-image: url("../images/icon_group.png");
-	background-repeat: no-repeat;
-	background-size: contain;
 }
 
 .number_rooms {
 	background-image: url("../images/icon_bed.png");
-	background-repeat: no-repeat;
+	/*background-repeat: no-repeat;*/
 }
 
 .number_bathrooms {
 	background-image: url("../images/icon_bath.png");
-	background-repeat: no-repeat;
+	/*background-repeat: no-repeat;*/
 }
