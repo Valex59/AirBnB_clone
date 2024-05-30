@@ -57,6 +57,9 @@
     align-items: center;
     justify-content: center;
     width: 100px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 35px;
 }
 
 .user {
